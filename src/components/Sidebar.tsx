@@ -1,16 +1,34 @@
 import "./Sidebar.css";
 import XcelTechLogo from "./XcelTechLogo";
 
-function Sidebar() {
+interface SidebarProps {
+  activePage:
+    | "leave-management"
+    | "employee-management";
+
+  onEmployeeManagement: () => void;
+
+  onLeaveManagement: () => void;
+}
+
+function Sidebar({
+  activePage,
+  onEmployeeManagement,
+  onLeaveManagement,
+}: SidebarProps) {
   return (
     <aside className="sidebar">
 
       <XcelTechLogo />
 
+      {/* ADMIN PROFILE */}
+
       <div className="admin-profile">
 
         <div className="admin-avatar">
+
           <div className="avatar-face">
+
             <div className="hair"></div>
 
             <div className="eyes">
@@ -19,7 +37,9 @@ function Sidebar() {
             </div>
 
             <div className="mouth"></div>
+
           </div>
+
         </div>
 
         <div>
@@ -29,6 +49,8 @@ function Sidebar() {
 
       </div>
 
+
+      {/* FEATURES */}
 
       <div className="sidebar-section-title">
         Features
@@ -64,6 +86,8 @@ function Sidebar() {
 
       </button>
 
+
+      {/* RECRUITMENT */}
 
       <div className="sidebar-section-title">
         Recruitment
@@ -109,12 +133,23 @@ function Sidebar() {
       </button>
 
 
+      {/* ORGANIZATION */}
+
       <div className="sidebar-section-title">
         Organization
       </div>
 
 
-      <button className="sidebar-item">
+      {/* EMPLOYEE MANAGEMENT */}
+
+      <button
+        className={`sidebar-item ${
+          activePage === "employee-management"
+            ? "active-employee"
+            : ""
+        }`}
+        onClick={onEmployeeManagement}
+      >
 
         <span className="sidebar-icon">
           👤
@@ -127,7 +162,16 @@ function Sidebar() {
       </button>
 
 
-      <button className="sidebar-item active-leave">
+      {/* LEAVE MANAGEMENT */}
+
+      <button
+        className={`sidebar-item ${
+          activePage === "leave-management"
+            ? "active-leave"
+            : ""
+        }`}
+        onClick={onLeaveManagement}
+      >
 
         <span className="sidebar-icon">
           📖
@@ -139,6 +183,8 @@ function Sidebar() {
 
       </button>
 
+
+      {/* PERFORMANCE */}
 
       <button className="sidebar-item">
 
@@ -153,6 +199,8 @@ function Sidebar() {
       </button>
 
 
+      {/* PAYROLL */}
+
       <button className="sidebar-item">
 
         <span className="sidebar-icon">
@@ -166,6 +214,8 @@ function Sidebar() {
       </button>
 
 
+      {/* LOGOUT */}
+
       <button className="logout-button">
 
         <span>
@@ -177,12 +227,18 @@ function Sidebar() {
       </button>
 
 
+      {/* BOTTOM COLORS */}
+
       <div className="sidebar-colors">
 
         <span className="color-red"></span>
+
         <span className="color-yellow"></span>
+
         <span className="color-blue"></span>
+
         <span className="color-cyan"></span>
+
         <span className="color-pink"></span>
 
       </div>

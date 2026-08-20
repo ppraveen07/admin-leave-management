@@ -1,21 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f5f6fa;
+  color: #111827;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
 .app {
   min-height: 100vh;
-
-  width: 100%;
-
-  background: #e7f1fc;
+  background: #f5f6fa;
 }
 
 .main-area {
   min-height: 100vh;
-
   margin-left: 200px;
-
-  padding: 0 24px 25px 18px;
-
-  box-sizing: border-box;
-
-  transition: margin-left 0.2s ease;
+  transition: margin-left 0.25s ease;
 }
 
 .main-area.expanded {
@@ -24,89 +33,6 @@
 
 .content {
   width: 100%;
-}
-
-.leave-tabs {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 21px;
-
-  margin-top: 9px;
-}
-
-.leave-tab {
-  height: 37px;
-
-  border: none;
-
-  border-radius: 8px;
-
-  background: #2d4b9e;
-
-  color: white;
-
-  font-family: "Poppins", sans-serif;
-
-  font-size: 10px;
-
-  font-weight: 600;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 4px 7px rgba(32, 54, 100, 0.20);
-
-  transition:
-    background 0.2s ease,
-    transform 0.15s ease;
-}
-
-.leave-tab:hover {
-  transform: translateY(-1px);
-
-  background: #24418e;
-}
-
-.leave-tab.active {
-  background: #ffbd00;
-
-  color: #111;
-}
-
-.leave-tab:disabled {
-  cursor: default;
-
-  opacity: 1;
-}
-
-/* On management page the PDF has
-   blue buttons, not yellow. */
-
-.leave-tabs .leave-tab:first-child:not(.active),
-.leave-tabs .leave-tab:nth-child(2):not(.active),
-.leave-tabs .leave-tab:nth-child(3):not(.active),
-.leave-tabs .leave-tab:nth-child(4) {
-  background: #2d4b9e;
-
-  color: white;
-}
-
-.leave-tabs .leave-tab.active {
-  background: #ffbd00;
-
-  color: #111;
-}
-
-@media (max-width: 900px) {
-  .main-area {
-    padding-right: 12px;
-    padding-left: 12px;
-  }
-
-  .leave-tabs {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  min-height: calc(100vh - 70px);
+  padding-top: 0;
 }
