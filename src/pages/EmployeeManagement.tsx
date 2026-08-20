@@ -105,58 +105,7 @@ function EmployeeManagement({
   return (
     <div className="employee-page">
 
-      {/* TOP SEARCH AREA */}
-
-      <div className="employee-topbar">
-
-        <div className="candidate-search">
-
-          <button className="candidate-select">
-            All Candidates
-            <span>⌃</span>
-          </button>
-
-          <div className="search-input-wrapper">
-
-            <input
-              type="text"
-              placeholder="Search..."
-              value={search}
-              onChange={(event) =>
-                setSearch(event.target.value)
-              }
-            />
-
-            <span className="search-icon">
-              ⌕
-            </span>
-
-          </div>
-
-        </div>
-
-        {/* TOP RIGHT ICONS */}
-
-        <div className="top-icons">
-
-          <button className="top-icon notification-icon">
-            🔔
-            <span>13</span>
-          </button>
-
-          <button className="top-icon tool-icon">
-            🔧
-          </button>
-
-          <button className="top-icon mail-icon">
-            ✉
-            <span>13</span>
-          </button>
-
-        </div>
-
-      </div>
-
+  
 
       {/* BREADCRUMB */}
 
