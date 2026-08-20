@@ -1,0 +1,102 @@
+.history-card {
+  background: white;
+
+  border-radius: 12px;
+
+  padding: 18px;
+
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.08);
+
+  overflow-x: auto;
+}
+
+.history-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.history-header h3 {
+  font-size: 15px;
+}
+
+.filter-button {
+  border: none;
+
+  background: transparent;
+
+  font-size: 16px;
+
+  margin-right: 12px;
+
+  cursor: pointer;
+}
+
+.export-button {
+  border: none;
+
+  background: #31931c;
+
+  color: white;
+
+  border-radius: 5px;
+
+  padding: 7px 14px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.history-card table {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0 5px;
+
+  font-size: 9px;
+}
+
+.history-card th {
+  background: #dfeaf7;
+
+  padding: 9px 7px;
+
+  text-align: left;
+
+  font-size: 8px;
+}
+
+.history-card td {
+  padding: 8px 7px;
+
+  background: #edf4fb;
+}
+
+.history-card tr:nth-child(even) td {
+  background: #dce8f6;
+}
+
+.history-action {
+  border: none;
+
+  background: #29469b;
+
+  color: white;
+
+  border-radius: 5px;
+
+  padding: 5px 11px;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}

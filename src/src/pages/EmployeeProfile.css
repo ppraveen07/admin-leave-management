@@ -1,0 +1,861 @@
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.employee-profile-page {
+  min-height: calc(100vh - 60px);
+
+  background: #e7f0fb;
+
+  padding: 18px 20px 27px;
+
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  color: #111;
+}
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.profile-breadcrumb {
+  margin-left: 8px;
+
+  margin-bottom: 12px;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #101010;
+}
+
+
+/* =========================================
+   PROFILE LAYOUT
+========================================= */
+
+.profile-layout {
+  display: grid;
+
+  grid-template-columns: 168px minmax(0, 1fr);
+
+  gap: 10px;
+
+  width: 100%;
+
+  min-height: 430px;
+}
+
+
+/* =========================================
+   LEFT PROFILE MENU
+========================================= */
+
+.profile-section-menu {
+  background: white;
+
+  border-radius: 10px;
+
+  padding: 15px 9px;
+
+  box-sizing: border-box;
+
+  height: fit-content;
+}
+
+
+.profile-section-button {
+  width: 100%;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  margin-bottom: 7px;
+
+  background: #dce9f7;
+
+  color: #161616;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+}
+
+
+.profile-section-button:last-child {
+  margin-bottom: 0;
+}
+
+
+.profile-section-button:hover {
+  background: #cfdff1;
+}
+
+
+.profile-section-button.selected {
+  background: #ffc20d;
+
+  color: #111;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.profile-content {
+  min-width: 0;
+
+  min-height: 430px;
+}
+
+
+/* =========================================
+   PERSONAL CARD
+========================================= */
+
+.personal-card {
+  width: 100%;
+
+  min-height: 300px;
+
+  background: white;
+
+  border-radius: 8px;
+
+  display: grid;
+
+  grid-template-columns: 46% 54%;
+
+  box-sizing: border-box;
+
+  padding: 24px 28px;
+}
+
+
+.personal-profile {
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.profile-avatar {
+  width: 80px;
+
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: #ffc20d;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  margin-bottom: 20px;
+}
+
+
+.profile-avatar-face {
+  width: 48px;
+
+  height: 52px;
+
+  background: #573126;
+
+  border-radius: 45% 45% 42% 42%;
+
+  position: relative;
+
+  margin-top: 7px;
+}
+
+
+.profile-avatar-hair {
+  position: absolute;
+
+  left: 3px;
+
+  top: -7px;
+
+  width: 43px;
+
+  height: 21px;
+
+  background: #1d1720;
+
+  border-radius: 50% 50% 30% 30%;
+}
+
+
+.profile-avatar-eyes {
+  position: absolute;
+
+  top: 22px;
+
+  left: 12px;
+
+  width: 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+
+.profile-avatar-eyes i {
+  width: 4px;
+
+  height: 4px;
+
+  background: white;
+
+  border-radius: 50%;
+}
+
+
+.profile-avatar-mouth {
+  position: absolute;
+
+  width: 12px;
+
+  height: 4px;
+
+  background: #35151a;
+
+  border-radius: 50%;
+
+  bottom: 13px;
+
+  left: 18px;
+}
+
+
+.personal-name {
+  font-size: 10px;
+
+  margin-bottom: 8px;
+}
+
+
+.personal-profile h2 {
+  margin: 0 0 25px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+.personal-label {
+  font-size: 8px;
+
+  margin-bottom: 8px;
+}
+
+
+.personal-profile h3 {
+  margin: 0;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   PERSONAL JOB
+========================================= */
+
+.personal-job-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+
+.edit-profile {
+  position: absolute;
+
+  right: 0;
+
+  top: 5px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 3px;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+
+.edit-icon {
+  font-size: 23px;
+
+  color: #777;
+}
+
+
+.personal-info-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 35px;
+
+  text-align: center;
+
+  margin-top: 50px;
+}
+
+
+.personal-info-row div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.personal-info-row span {
+  font-size: 8px;
+}
+
+
+.personal-info-row strong {
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   COMMON DETAILS CARD
+========================================= */
+
+.details-card {
+  background: white;
+
+  border-radius: 8px;
+
+  min-height: 300px;
+
+  padding: 27px 27px;
+
+  box-sizing: border-box;
+}
+
+
+.details-title {
+  margin: 0 0 12px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   FIELDS
+========================================= */
+
+.two-column {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+
+  margin-bottom: 12px;
+}
+
+
+.info-field {
+  min-width: 0;
+}
+
+
+.info-field label {
+  display: block;
+
+  font-size: 10px;
+
+  margin-bottom: 7px;
+
+  color: #151515;
+}
+
+
+.info-value {
+  height: 34px;
+
+  border-radius: 5px;
+
+  background: #dce9f7;
+
+  padding: 0 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+
+  font-size: 10px;
+
+  color: #222;
+
+  position: relative;
+}
+
+
+.field-wide {
+  margin-bottom: 13px;
+}
+
+
+.field-wide .info-value {
+  width: 100%;
+}
+
+
+.field-medium {
+  width: 30%;
+
+  margin-bottom: 13px;
+}
+
+
+.field-arrow {
+  position: absolute;
+
+  right: 10px;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-card {
+  padding-top: 28px;
+}
+
+
+/* =========================================
+   EDUCATION
+========================================= */
+
+.education-card {
+  padding-top: 24px;
+}
+
+
+.education-item {
+  width: 100%;
+
+  min-height: 40px;
+
+  background: #dce9f7;
+
+  border-radius: 5px;
+
+  margin-bottom: 7px;
+
+  padding: 9px 13px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 3px;
+}
+
+
+.education-item strong {
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.education-item span {
+  font-size: 10px;
+
+  color: #444;
+}
+
+
+.professional-title {
+  margin-top: 18px;
+}
+
+
+.education-item p {
+  font-size: 10px;
+
+  line-height: 12px;
+
+  margin: 4px 0 0;
+}
+
+
+.web-developer {
+  min-height: 62px;
+}
+
+
+/* =========================================
+   GUARANTOR
+========================================= */
+
+.guarantor-item {
+  min-height: 39px;
+
+  background: #dce9f7;
+
+  border-radius: 5px;
+
+  margin-bottom: 8px;
+
+  padding: 8px 12px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 4px;
+}
+
+
+.guarantor-item strong {
+  font-size: 10px;
+}
+
+
+.guarantor-item span {
+  font-size: 10px;
+
+  color: #444;
+}
+
+
+/* =========================================
+   FAMILY
+========================================= */
+
+.family-item {
+  background: #dce9f7;
+
+  border-radius: 5px;
+
+  padding: 10px 13px;
+
+  margin-bottom: 8px;
+
+  min-height: 55px;
+
+  box-sizing: border-box;
+}
+
+
+.family-item strong {
+  font-size: 10px;
+}
+
+
+.family-item p {
+  font-size: 10px;
+
+  margin: 5px 0 0;
+
+  color: #444;
+}
+
+
+/* =========================================
+   JOB DETAILS
+========================================= */
+
+.job-details-card {
+  padding: 25px 27px;
+}
+
+
+.job-main {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 18px;
+
+  margin: 25px 0;
+}
+
+
+.job-role,
+.job-department {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.job-role span,
+.job-department span {
+  font-size: 10px;
+}
+
+
+.job-role strong,
+.job-department strong {
+  font-size: 15px;
+}
+
+
+.job-description-title {
+  text-align: center;
+
+  font-size: 12px;
+
+  margin: 12px 0;
+}
+
+
+.responsibility-title {
+  font-size: 10px;
+
+  margin-bottom: 5px;
+}
+
+
+.job-list {
+  margin: 0;
+
+  padding-left: 18px;
+
+  font-size: 7px;
+
+  line-height: 13px;
+}
+
+
+.view-documents {
+  border: none;
+
+  background: #328c1d;
+
+  color: white;
+
+  border-radius: 4px;
+
+  padding: 7px 20px;
+
+  font-size: 10px;
+
+  margin-top: 12px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   FINANCIAL
+========================================= */
+
+.financial-card {
+  padding-top: 27px;
+}
+
+
+.update-account {
+  display: block;
+
+  width: 200px;
+
+  height: 28px;
+
+  margin: 25px auto 0;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background: #328c1d;
+
+  color: white;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .employee-profile-page {
+    padding: 12px;
+  }
+
+  .profile-topbar {
+    padding-left: 0;
+
+    height: auto;
+
+    gap: 12px;
+  }
+
+  .profile-search-input {
+    width: 180px;
+  }
+
+  .profile-layout {
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+
+  .personal-card {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-job-info {
+    min-height: 150px;
+  }
+
+  .edit-profile {
+    right: 10px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .profile-topbar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .profile-search {
+    width: 100%;
+  }
+
+  .profile-search-input {
+    width: 100%;
+  }
+
+  .profile-top-icons {
+    justify-content: flex-end;
+
+    margin-right: 0;
+  }
+
+  .profile-layout {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .profile-section-menu {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6px;
+
+    padding: 8px;
+  }
+
+  .profile-section-button {
+    margin-bottom: 0;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .field-medium {
+    width: 100%;
+  }
+
+  .personal-info-row {
+    gap: 15px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .profile-section-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .personal-card {
+    padding: 18px;
+  }
+
+  .personal-info-row {
+    grid-template-columns: 1fr;
+  }
+
+  .details-card {
+    padding: 18px;
+  }
+}

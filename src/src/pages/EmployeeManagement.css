@@ -1,0 +1,661 @@
+.employee-page {
+  min-height: calc(100vh - 60px);
+
+  background: #e7f0fb;
+
+  padding: 28px 18px 22px;
+
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.employee-topbar {
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-left: 140px;
+
+  margin-bottom: 13px;
+}
+
+
+/* SEARCH */
+
+.candidate-search {
+  height: 40px;
+
+  display: flex;
+
+  align-items: stretch;
+
+  margin-left: 0;
+}
+
+
+.candidate-select {
+  width: 130px;
+
+  border: none;
+
+  border-radius: 8px 0 0 8px;
+
+  background: #29469a;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+}
+
+
+.candidate-select span {
+  font-size: 10px;
+}
+
+
+.search-input-wrapper {
+  width: 304px;
+
+  height: 40px;
+
+  background: white;
+
+  border-radius: 0 9px 9px 0;
+
+  display: flex;
+
+  align-items: center;
+
+  position: relative;
+}
+
+
+.search-input-wrapper input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  padding: 0 43px 0 20px;
+
+  box-sizing: border-box;
+
+  font-size: 11px;
+
+  color: #555;
+}
+
+
+.search-input-wrapper input::placeholder {
+  color: #a5a5a5;
+}
+
+
+.search-icon {
+  position: absolute;
+
+  right: 17px;
+
+  top: 8px;
+
+  font-size: 25px;
+
+  color: #b6b6b6;
+
+  line-height: 25px;
+}
+
+
+/* =========================================
+   TOP RIGHT ICONS
+========================================= */
+
+.top-icons {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-right: 20px;
+}
+
+
+.top-icon {
+  position: relative;
+
+  width: 31px;
+
+  height: 31px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+.notification-icon {
+  background: #29469a;
+
+  color: white;
+}
+
+
+.tool-icon {
+  background: #ffc400;
+
+  color: #111;
+}
+
+
+.mail-icon {
+  background: #328a22;
+
+  color: white;
+}
+
+
+.top-icon span {
+  position: absolute;
+
+  right: -4px;
+
+  top: -4px;
+
+  min-width: 12px;
+
+  height: 12px;
+
+  padding: 0 2px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: #ff1111;
+
+  color: white;
+
+  font-size: 6px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.employee-breadcrumb {
+  margin-left: 8px;
+
+  margin-bottom: 11px;
+
+  color: #101010;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   MAIN WHITE CARD
+========================================= */
+
+.employee-container {
+  background: white;
+
+  border-radius: 15px;
+
+  padding: 15px 18px 20px;
+
+  box-sizing: border-box;
+
+  width: 100%;
+
+  overflow: visible;
+}
+
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.employee-card-header {
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 10px 0 12px;
+}
+
+
+.employee-card-header h1 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.employee-header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+
+/* FILTER */
+
+.filter-button {
+  border: none;
+
+  background: transparent;
+
+  color: #000;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  width: 25px;
+
+  height: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* EXPORT */
+
+.export-button {
+  width: 97px;
+
+  height: 38px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #328c1d;
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 4px
+    rgba(0, 0, 0, 0.08);
+}
+
+
+.export-button span {
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.employee-table-container {
+  width: 100%;
+
+  overflow: visible;
+}
+
+
+.employee-table {
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0 5px;
+
+  table-layout: fixed;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.employee-table thead tr {
+  height: 51px;
+}
+
+
+.employee-table thead th {
+  background: #dfebf8;
+
+  color: #080808;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-align: left;
+
+  padding: 0 10px;
+
+  white-space: nowrap;
+}
+
+
+.employee-table thead th:first-child {
+  border-radius: 4px 0 0 4px;
+
+  width: 15%;
+}
+
+
+.employee-table thead th:nth-child(2) {
+  width: 9%;
+}
+
+
+.employee-table thead th:nth-child(3) {
+  width: 15%;
+}
+
+
+.employee-table thead th:nth-child(4) {
+  width: 13%;
+}
+
+
+.employee-table thead th:nth-child(5) {
+  width: 12%;
+}
+
+
+.employee-table thead th:nth-child(6) {
+  width: 12%;
+}
+
+
+.employee-table thead th:last-child {
+  width: 12%;
+
+  border-radius: 0 4px 4px 0;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.employee-table tbody tr {
+  height: 47px;
+}
+
+
+.employee-table tbody td {
+  color: #080808;
+
+  font-size: 11px;
+
+  padding: 0 10px;
+
+  height: 47px;
+
+  white-space: nowrap;
+
+  overflow: visible;
+}
+
+
+.employee-table tbody tr:nth-child(odd) td {
+  background: #ffffff;
+}
+
+
+.employee-table tbody tr:nth-child(even) td {
+  background: #dfebf8;
+}
+
+
+.employee-table tbody td:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+
+.employee-table tbody td:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.action-cell {
+  position: relative;
+
+  overflow: visible !important;
+}
+
+
+.actions-button {
+  width: 95px;
+
+  height: 31px;
+
+  border: none;
+
+  border-radius: 4px;
+
+  background: #29469a;
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 11px;
+
+  cursor: pointer;
+
+  box-shadow: 0 2px 4px
+    rgba(0, 0, 0, 0.12);
+}
+
+
+.actions-button span {
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ACTION DROPDOWN
+========================================= */
+
+.actions-dropdown {
+  position: absolute;
+
+  z-index: 100;
+
+  top: 34px;
+
+  right: 10px;
+
+  width: 95px;
+
+  background: #29469a;
+
+  border-radius: 0 0 3px 3px;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 8px
+    rgba(0, 0, 0, 0.2);
+}
+
+
+.actions-dropdown button {
+  width: 100%;
+
+  height: 38px;
+
+  border: none;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.25);
+
+  background: #29469a;
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: center;
+}
+
+
+.actions-dropdown button:hover {
+  background: #20387f;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .employee-page {
+    padding: 20px 12px;
+  }
+
+  .employee-topbar {
+    padding-left: 0;
+  }
+
+  .search-input-wrapper {
+    width: 250px;
+  }
+
+  .employee-table-container {
+    overflow-x: auto;
+  }
+
+  .employee-table {
+    min-width: 850px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .employee-topbar {
+    height: auto;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+  }
+
+  .candidate-search {
+    width: 100%;
+  }
+
+  .search-input-wrapper {
+    width: 100%;
+  }
+
+  .top-icons {
+    justify-content: flex-end;
+
+    margin-right: 0;
+  }
+
+  .employee-card-header {
+    height: auto;
+
+    padding: 8px 5px;
+
+    gap: 10px;
+  }
+
+}

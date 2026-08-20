@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #f5f6fa;
+  color: #111827;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+.main-area {
+  min-height: 100vh;
+  margin-left: 200px;
+  transition: margin-left 0.25s ease;
+}
+
+.main-area.expanded {
+  margin-left: 0;
+}
+
+.content {
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  padding-top: 0;
+}
